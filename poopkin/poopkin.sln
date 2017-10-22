@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poopkin.Plugins", "poopkin.Plugins.csproj", "{DEA2FDF2-8300-7A2E-280F-A4BC7696B699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poopkin", "poopkin.csproj", "{051FCE24-EA45-47CF-92F9-634A8A4FC60E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poopkin.Editor.Plugins", "poopkin.Editor.Plugins.csproj", "{31FB0CA4-F062-EBCB-D441-C0924AE1CAE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEA2FDF2-8300-7A2E-280F-A4BC7696B699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA2FDF2-8300-7A2E-280F-A4BC7696B699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA2FDF2-8300-7A2E-280F-A4BC7696B699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA2FDF2-8300-7A2E-280F-A4BC7696B699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{051FCE24-EA45-47CF-92F9-634A8A4FC60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051FCE24-EA45-47CF-92F9-634A8A4FC60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051FCE24-EA45-47CF-92F9-634A8A4FC60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051FCE24-EA45-47CF-92F9-634A8A4FC60E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FB0CA4-F062-EBCB-D441-C0924AE1CAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FB0CA4-F062-EBCB-D441-C0924AE1CAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FB0CA4-F062-EBCB-D441-C0924AE1CAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FB0CA4-F062-EBCB-D441-C0924AE1CAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
