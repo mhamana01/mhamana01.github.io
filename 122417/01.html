@@ -21,7 +21,7 @@
     console.log('読み込んだよ');
 
       //device motion event
-      window.addEventlistener('devicemotion', function(evt){
+      window.addEventListener('devicemotion', function(evt){
         console.log(evt);
 
         var x = evt.acceleration.x;
@@ -29,8 +29,8 @@
         var z = evt.acceleration.z;
 
         $('ul li:eq(0)').text('x: '+x);
-        $('ul li:eq(0)').text('y: '+y);
-        $('ul li:eq(0)').text('z: '+z);
+        $('ul li:eq(1)').text('y: '+y);
+        $('ul li:eq(2)').text('z: '+z);
 
       });
 
