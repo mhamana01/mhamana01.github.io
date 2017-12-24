@@ -31,7 +31,17 @@
 
           console.log('lat: '+lat, 'lon: '+lon);
 
+          setWeather(lat,lon); //経度緯度を受け渡しする
+
         });
+
+        //天気を表示する関数
+        function setWeather(lat,lon){
+
+            //API key
+            var apikey ='cc2950847b3436ed14a0403888f7e85a';
+
+        }
 
         //少数2桁で切り捨てる関数
         function calLocation(num){
