@@ -25,6 +25,10 @@
           console.log(pos);
           var lat = pos.coords.latitude;
           var lon = pos.coords.longitude;
+
+          lat = calLocation(lat);
+          lot = calLocation(lon);
+
           console.log('lat: '+lat, 'lon: '+lon);
 
         });
