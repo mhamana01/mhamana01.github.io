@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>devicemotion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devicemotion</title>
 </head>
 <body>
-  <h1>device motionのテスト</h1>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <script src ="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script>
-    //DOMの読み込み
+    <h1>devicemotionのテスト</h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    // DOMの読み込み
     $(function(){
 
-    console.log('読み込んだよ');
+        console.log('読み込んだよ');
 
-      //device motion event
-      window.addEventListener('devicemotion', shakeDevice);
+        // devicemotion event
+        window.addEventListener('devicemotion',shakeDevice);
 
-        //スマホを振ったら呼び出される関数
+        // スマホを振ったら呼び出される関数
         function shakeDevice(evt){
-          console.log(evt);
+            console.log(evt);
+            // X軸
+            var x = evt.acceleration.x;
+            // Y軸
+            var y = evt.acceleration.y;
+            // Z軸
+            var z = evt.acceleration.z;
 
-          var x = evt.acceleration.x;
-          var y = evt.acceleration.y;
-          var z = evt.acceleration.z;
+            $('ul li:eq(0)').text('x: ' + x);
+            $('ul li:eq(1)').text('y: ' + y);
+            $('ul li:eq(2)').text('z: ' + z);
 
-          $('ul li:eq(0)').text('x: '+x);
-          $('ul li:eq(1)').text('y: '+y);
-          $('ul li:eq(2)').text('z: '+z);
-
-
-          //もしスマホを振ったら
-          if( Math.abs(x) > 10 || Math.abs(y)>10 || Math.abs(z)>10){
-            $('h1').text('振り終わったよ');
-            window.removeEventListner('devicemotion', shakeDevice);
-          }
+            // スマホを振ったら
+            if( Math.abs(x) > 10 || Math.abs(y) > 10 || Math.abs(z) > 10 ){
+                $('h1').text('振り終わったよ');
+                window.removeEventListener('devicemotion', shakeDevice);
+            }
         }
-      });
 
-  </script>
+    });
+    </script>
 </body>
 </html>
