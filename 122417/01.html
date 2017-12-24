@@ -21,18 +21,30 @@
     console.log('読み込んだよ');
 
       //device motion event
-      window.addEventListener('devicemotion', function(evt){
-        console.log(evt);
+      window.addEventListener('devicemotion', shakeDevice);
 
-        var x = evt.acceleration.x;
-        var y = evt.acceleration.y;
-        var z = evt.acceleration.z;
+        //スマホを振ったら呼び出される関数
+        function shakeDevice(evt){
+          console.log(evt);
 
-        $('ul li:eq(0)').text('x: '+x);
-        $('ul li:eq(1)').text('y: '+y);
-        $('ul li:eq(2)').text('z: '+z);
+          var x = evt.acceleration.x;
+          var y = evt.acceleration.y;
+          var z = evt.acceleration.z;
 
+          $('ul li:eq(0)').text('x: '+x);
+          $('ul li:eq(1)').text('y: '+y);
+          $('ul li:eq(2)').text('z: '+z);
+
+
+          //もしスマホを振ったら
+          if( Math.abs(x) > 10 || Math.abs(y) || Math.abs(z)){
+            $('h1').text('振り終わったよ');
+            window.removeEventListner('devicemotion', shakeDevice);
+          }
+        }
       });
+
+
 
 
     });
