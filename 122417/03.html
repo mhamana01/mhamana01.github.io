@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>devicegeolocation|GPSのテスト</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geolocation | GPSのテスト</title>
 </head>
 <body>
-  <h1>devicegeolocation|GPSのテスト</h1>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <script src ="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script>
-      //DOMの読み込み
-      $(function(){
+    <h1>geolocation | GPSのテスト</h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    // DOMの読み込み
+    $(function(){
 
         console.log('読み込んだよ');
 
+        // GPSからの緯度経度の取得
         navigator.geolocation.getCurrentPosition(function(pos){
+            console.log(pos);
+            var lat = pos.coords.latitude; //緯度
+            var lon = pos.coords.longitude; //経度
+            lat = calLocation(lat);
+            lon = calLocation(lon);
+            console.log('lat: ' + lat, 'lon: '+lon);
 
-          console.log(pos);
-          var lat = pos.coords.latitude;
-          var lon = pos.coords.longitude;
-
-          lat = calLocation(lat);
-          lot = calLocation(lon);
-
-          console.log('lat: '+lat, 'lon: '+lon);
-
-          setWeather(lat,lon); //経度緯度を受け渡しする
+            setWeather(lat,lon); //緯度経度を受け渡しする
 
         });
 
-        //天気を表示する関数
+
+        // 天気を表示する関数
         function setWeather(lat,lon){
 
-            //API key 定数
-            const apikey ='cc2950847b3436ed14a0403888f7e85a';
-            //OpenWeatherMapようのURL
-            var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apikey;
+            // Open Weather Map APIキー 定数
+            const apikey = 'f3cdcde042f3a124d0f5c7474e9b0792';
+            // OpenWeatherMap用のURL
+            var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+ apikey;
 
-            //ajax通信
+            // ajax通信
             $.ajax({
-                ulr:weatherUrl,
+                url:weatherUrl,
                 dataType:'json'
             }).done(function(data){
-              console.log(data);
-            }).fail(function(){
-              console.log('ajax error');
-            });
+                // 通信成功
+                console.log(data);
 
+            }).fail(function(){
+                console.log('ajax error'); //通信失敗
+            });
 
         }
 
-        //少数2桁で切り捨てる関数
+
+        //少数２桁で切り捨てる関数
         function calLocation(num){
-            var numA = num*100; //2桁あがる
-            numA = Math.floor(numA)/100; //切り捨て2桁下げる
+            var numA = num*100; //２桁あがる
+            numA = Math.floor(numA)/100; //切捨てて２桁下げる
             return numA;
         }
 
-      });
-
-  </script>
+    });
+    </script>
 </body>
 </html>
