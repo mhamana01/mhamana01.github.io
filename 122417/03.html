@@ -38,8 +38,21 @@
         //天気を表示する関数
         function setWeather(lat,lon){
 
-            //API key
-            var apikey ='cc2950847b3436ed14a0403888f7e85a';
+            //API key 定数
+            const apikey ='cc2950847b3436ed14a0403888f7e85a';
+            //OpenWeatherMapようのURL
+            var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apikey;
+
+            //ajax通信
+            $.ajax({
+                ulr:weatherUrl,
+                dataType:'json'
+            }).done(function(data){
+              console.log(data);
+            }).fail(function(){
+              console.log('ajax error');
+            });
+
 
         }
 
