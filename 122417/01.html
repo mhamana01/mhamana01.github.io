@@ -24,6 +24,9 @@
       window.addEventlistener('devicemotion', function(evt){
         console.log(evt);
 
+        var x = evt.acceleration.x;
+        var y = evt.acceleration.y;
+        var z = evt.acceleration.z;
       });
 
 
