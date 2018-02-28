@@ -1,0 +1,286 @@
+/*Font*/
+body{
+    font-size:12px;
+    font-family:-apple-system, BlinkMacSystemFont, "Julius Sans One","Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height:1.6;
+    font-weight:normal;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 130px;
+  z-index: 999;
+  background: #fff;
+  position: absolute;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.1);
+}
+
+/*navigation*/
+.top-navigation{
+  height: 70px;
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-right: 70px;
+  align-items: center;
+  border-bottom: solid 1px #d1d1d1;
+  font-family: "Julius Sans One";
+  display: flex;
+}
+
+.contact{
+  width: 40%;
+  letter-spacing: 3px;
+}
+.logo{
+  width: 33%;
+  text-align: center;
+}
+.logo img{
+  height: 55px;
+  width: 170px;
+}
+.search-form{
+  text-align: right;
+  width: 33%;
+}
+.shopping-bag{
+  padding-left: 20px;
+}
+.input-text{
+  padding: 10px 10px;
+  border: none;
+  border-bottom: solid 1px #000;
+}
+.button{
+  height:28px;
+  width: 30px;
+  background: url(../img/search.png) center center no-repeat;
+  border: none;
+  float: right;
+  margin-left: 50px;
+}
+
+/*bottom Navigation*/
+
+.nav-container{
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  padding-top:10px;
+}
+
+.main-nav{
+  font-family: "Julius Sans One";
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav ul li{
+  float: left;
+  margin-right: 80px;
+
+}
+header nav ul li:last-child{
+  margin-right: 0px;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: #000;
+  /*display: block;*/
+  /*width: 12rem;*/
+}
+
+section {
+  padding-top: 170px;
+  width: 1280px;
+  height: 40px;
+
+}
+section ul{
+  display: flex;
+  width: 300px;
+  justify-content:space-around;
+  margin: 0 3.5rem;
+}
+
+.slider-wrap{
+  display:flex;
+  width: 1160px;
+  height: 500px;
+  padding: 0 60px;
+}
+
+.slider-nav{
+  width:100px;
+  height: 500px;
+
+}
+.slider-nav li{
+  width: 100%;
+  margin-right:100px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.slider-nav li:hover   {opacity:0.8;}
+.slider-nav li:active  {opacity:0.8;}
+
+
+.slider-nav img{
+  width: 100px;
+  position: relative;
+}
+
+.slider-for{
+  width:500px;
+}
+
+.slider-for img{
+  width:500px;
+
+}
+
+.product-main-content{
+  width:350px;
+  padding-left: 60px;
+
+}
+
+.product-main-content h1{
+  font-size: 25px;
+  font-weight: bold;
+}
+.product-main-content h2{
+  font-size: 18px;
+}
+.product-main-content p{
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.colorSelect p{
+  font-size: 12px;
+}
+
+
+
+/*カラー変更*/
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #000;
+}
+
+
+/*サイズ変更*/
+.sizeSelect ul{
+  display: flex;
+  font-size: 16px;
+  width: 350px;
+}
+.sizeSelect li{
+  border: .0625rem solid #ccc;
+  padding: 5px 7px;
+  display: inline-block;
+  min-width: 1rem;
+  text-align: center;
+  margin-right: 10px;
+}
+
+ul > li > input{ /* HIDE RADIO */
+  visibility:hidden; /* Makes input not-clickable */
+  border: .0625rem solid #ccc;
+  cursor:pointer;
+}
+
+ul > input:checked { /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #000;
+}
+/*サイズ表*/
+.size-chart p{
+  font-size: 12px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+/*数量の選択*/
+.quantity{
+  display: flex;
+  width:50%;
+  border: 1px solid #ccc;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+/*カートに追加*/
+.addtocart{
+  width: 100%;
+  background-color: black;
+}
+.addtocart h1{
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding:24px 0;
+}
+
+/*Footer*/
+footer{
+  height: 305px;
+  background-color: #000;
+  padding-top: 85px;
+}
+.footer-news-signup{
+  width: 400px;
+}
+.footer-sineup-field{
+  width: 70%;
+  padding: 10px 10px;
+}
+#footer-newsletter-signup{
+  border-style: none;
+  padding: 0px;
+  width:80px;
+  height:36px;
+  border: solid 1px #000;
+}
+.footer-container{
+  display: flex;
+  margin-right: 100px;
+  margin-left: 100px;
+  width: 80%;
+  justify-content: space-between;
+}
+.footer-nav{
+  display: flex;
+  width:50%;
+  justify-content: space-between;
+  color: #fff;
+  float: right;
+}
+.footer-column h5{
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+.footer-column a{
+  text-decoration: none;
+  color: #fff;
+}
+.footer-column p{
+  margin-bottom: 5px
+}

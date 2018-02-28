@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas</title>
+</head>
+<body>
+  <canvas id="stage" with ="1024" height ="768"></canvas>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    //DOMの読み込み
+    $(function(){
+      //canvasタグの取得
+      var stage = new createjs.Stage('stage');
+
+      //図形の描画
+      var circle = new createjs.Shape();
+      circle.graphics.beginFill('#00FF00').drawCircle(0,0,40);
+      stage.addChild(circle); //ステージに丸を配置
+      circle.x= 50;
+      circle.y= 200;
+
+      //tween animation
+      createjs.Tween.get(circle)
+      .to({x:200,y:200},1000, createjs.Ease.cubicIn)
+      .wait(500)
+      .to({x:50,y:250,alpha:1, scaleX:1.5,scaleY:1.5},500,createjs.Ease.bounceOut);
+
+      var star = new createjs.Shape();
+      star.graphics.beginFill('#FF0000').drawPolyStar(0,0,40,5,0.6,-90);
+      stage.addChild(star);
+      star.x = stage.canvas.width/2;
+      star.y = stage.canvas.height/2;
+
+      var rect = new createjs.Shape();
+      rect.graphics.beginFill('#0000FF').drawRect(60,60,60,60);
+      stage.addChild(rect);
+      rect.x = 100;
+      rect.y = 250;
+      rect.alpha = 0.5;
+      //rect.visible = false;
+
+      createjs.Ticker.addEventListener('tick', tick);
+      createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;//request AnimationFrame の実行
+
+      function tick(){
+      /*  circle.x += 5;
+
+        if(circle.x > stage.canvas.width){
+          circle.x = 0;
+        }
+        */
+        star.rotation  +=5;
+        if(star.rotation >=360){
+          star.rotation = 0;
+        }
+
+        rect.y +=5;
+        if(rect.y > stage.canvas.height){
+          rect.y = 0;
+        }
+
+
+
+        stage.update(); //描画の更新
+      }
+
+
+
+    });
+
+  </script>
+</body>
+</html>
