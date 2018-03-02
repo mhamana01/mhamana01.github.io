@@ -31,9 +31,9 @@
           <li><a href="#">All Items</a></li>
           <li><a href="#">Sale</a></li>
           <li><a href="#">Lookbook</a></li>
-          <li><a href="#">About us<a/></li>
-          <li><a href="#">Sign up<a/></li>
-          <li><a href="#">Account<a/></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Account</a></li>
           <li><a href="#">Help</a></li>
         </ul>
       </nav>
@@ -50,6 +50,12 @@
 </section>
 
 <div class="slider-wrap">
+  <ul class="slider-nav">
+      <li><img src="img/product-preview.jpg" alt=""></li>
+      <li><img src="img/product-thumb.jpg" alt=""></li>
+      <li><img src="img/product-thumb.jpg" alt=""></li>
+      <li><img src="img/product-thumb.jpg" alt=""></li>
+    </ul>
   <ul class="slider-for">
       <li><img src="img/product-preview.jpg" alt=""></li>
       <li><img src="img/product-thumb.jpg" alt=""></li>
@@ -58,12 +64,6 @@
       <li><img src="img/product-preview.jpg" alt=""></li>
     </ul>
 
-  <ul class="slider-nav">
-      <li><img src="img/product-preview.jpg" alt=""></li>
-      <li><img src="img/product-thumb.jpg" alt=""></li>
-      <li><img src="img/product-thumb.jpg" alt=""></li>
-      <li><img src="img/product-thumb.jpg" alt=""></li>
-    </ul>
 
 <!------------>
 <!--商品の詳細-->
@@ -72,48 +72,156 @@
       <h2>10,340円（税込）</h2>
       <p>コットン見えするマットなナイロンを使用！表にステッチがないからスタイリッシュ。</p>
 
-      <div class ="colorSelect">
-      <p>カラーを選択：<span class="h5">ピンク</span></p>
-      <label>
-        <input type="radio" name="gender" value="ピンク" />
-        <img src="img/pink.svg" alt="">
-      </label>
-      <label>
-        <input type="radio" name="gender" value="ベージュ" />
-        <img src="img/brown.svg"  alt="">
-      </label>
-      </div>
-      <!--テキスト出力用要素-->
-      <h5></h5>
 
+      <p id="colorselect">カラーを選択：</p>
+      <div class ="color-tab">
+        <button onclick="myColor('ピンク')">
+          <img src="img/pink.svg" alt="">
+        </button>
+        <button onclick="myColor('ベージュ')">
+          <img src="img/brown.svg" alt="">
+        </button>
+      </div>
+
+
+
+
+    <p id="peep">サイズを選択：</p>
+    <div class ="size-tab">
+      <button onclick="myFunction('XS')">XS</button>
+      <button onclick="myFunction('S')">S</button>
+      <button onclick="myFunction('M')">S</button>
+      <button onclick="myFunction('L')">S</button>
+    </div>
+
+<!--
       <div class ="sizeSelect">
-      <p>サイズを選択：<span class="size">XS</span></p>
+      <p>サイズを選択：<span id="size-selection" class="size">XS</span></p>
       <ul>
-        <li><input type="radio" name="size" value="XS" /></li>
-        <li><input type="radio" name="size" value="S" /></li>
-        <li><input type="radio" name="size" value="M" /></li>
-        <li><input type="radio" name="size" value="L" /></li>
-        <li><input type="radio" name="size" value="XL" /></li>
+        <li>
+          <label>XS
+            <input type="radio" name="size" value="XS" />
+          </label>
+        </li>
+        <li>
+          <label>S
+            <input type="radio" name="size" value="S" />
+          </label>
+        </li>
+        <li>
+          <label>M
+            <input type="radio" name="size" value="M" />
+          </label>
+        </li>
+        <li>
+          <label>L
+          <input type="radio" name="size" value="L" />
+          </label>
+        </li>
+        <li>
+          <label>XL
+          <input type="radio" name="size" value="XL" />
+          </label>
+        </li>
       </ul>
       </div>
-      <!--テキスト出力用要素-->
-      <span class="size"></span>
+    <!--テキスト出力用要素
+     <span class="size"></span>-->
 
       <div class ="size-chart">
       <p><a href="#">サイズ表を見る</a></p>
       </div>
 
       <div class ="quantity">
-      <button id ="minus">ー</button>
-      <div id="output">1</div>
-      <button id ="plus">＋</button>
+        <a id="minus" href="#">−</a>
+          <span id="value">0</span>
+        <a id="plus" href="#">＋</a>
       </div>
+
 
       <div class ="addtocart">
       <h1>カートに追加</h1>
       </div>
+  </div>
 </div>
+
+
+<div class="description">
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">この商品について</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">素材</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">取り扱い</button>
+    <button class="tablinks" onclick="openCity(event, 'Review')">レビュー</button>
+  </div>
+
+  <div id="London" class="tabcontent">
+    <h3>この商品について</h3>
+    <p>・時代や世代を超えて愛されている、パリジャン・シックの代名詞。イネス・ド・ラ・フレサンジュとのコラボレーションアイテム。・3層構造で表にステッチがない、スタイリッシュなデザイン。・寒さの残る季節から春までずっと使える。</p>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>素材</h3>
+    <p>表地： 100％ ナイロン/ 裏地： 100％ ナイロン/ 中わた： 90％ ダウン，10％ フェザー</p>
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>取り扱い</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  <div id="Review" class="tabcontent">
+    <h3>2件のレビューがあります</h3>
+    <p>ダウンジャケットなのに何故2月23日に発売なのでしょうか？冬に着用したいのでもっと早く発売して欲しいです。2年前にこの商品を購入して良かったので次回販売されたらブラックが欲しいと思っていたのですが、今年はないのですね。見た目がダウンジャケットだと見えないし大変温かくて抜け毛も出にくいので大変良かったです。もっとカラーバリエーションを増やして欲しいです。店舗販売もして欲しいです。すぐに欲しいのに通販だと時間がかかります。</p>
+
+    <p>オンラインで購入し今届きました。白のダウンは珍しく色も素敵でした。ただ試着が出来なくて購入したため少し大きかったかな。とか他の色もきて比べたかったな。と思いました。店舗数がどんどん減らされているのが残念です。</p>
+  </div>
+</div>
+
+
+<div class="why-silk">
+  <h1>シルクの魅力</h1>
+  <div class="first-colum">
+    <div class="fact-one">
+      <img src="img/feature4.jpg" alt="">
+      <h1>お肌に優しい</h1>
+      <p>お肌の成分に近い約20種のアミノ酸</p>
+  </div>
+    <div class="fact-one">
+      <img src="img/feature4.jpg" alt="">
+      <h1>吸湿性</h1>
+      <p>シルクは吸湿性が優れていて放湿速度が大きく、さらに保温性に優れた繊維で、「冬は暖かく、夏は涼しい」快適な天然のエアコン素材です。</p>
+    </div>
+
+    <div class="fact-one">
+      <img src="img/feature4.jpg" alt="">
+      <h1>UVカット</h1>
+      <p>シルク製品を身につけた場合、お肌の大敵といわれるUV-B波（UVB）、UV-C波（UVC）が吸収されて紫外線をカット</p>
+    </div>
+
+    <div class="fact-one">
+      <img src="img/feature4.jpg" alt="">
+      <h1>静電気が起きにくい</h1>
+      <p>シルクは吸湿性に富んでおり合成繊維に比べ静電気はおきにくくなります</p>
+    </div>
+  </div>
+
 <!--
+  <div class="second-colum">
+    <div class="fact-one">
+      <img src="img/feature4.jpg" alt="">
+      <h1>お肌に優しい</h1>
+  </div>
+    <div class="fact-two">
+      <img src="img/feature4.jpg" alt="">
+      <h1>吸湿性</h1>
+    </div>
+
+    <div class="fact-three">
+      <img src="img/feature4.jpg" alt="">
+      <h1>通気性</h1>
+    </div>
+  </div>-->
+</div>
+
 <footer>
   <div class="footer-container">
     <div class="footer-news-signup">
@@ -154,11 +262,11 @@
     </div>
   </div>
 </footer>
--->
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script type="text/javascript" src="js/slick.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/product-script.js"></script>
 <!--<script type="text/javascript" src="js/slick.js"></script>-->
 
 </body>

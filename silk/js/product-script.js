@@ -1,4 +1,30 @@
 
+//-----------------------------------------------------
+//商品詳細タブ
+//-----------------------------------------------------
+
+
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName('tablinks');
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+
+    document.getElementById(cityName).style.display = "block";
+    /*console.log(tabcontent);*/
+
+    evt.currentTarget.className += "active";
+}
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
 
 
 //-----------------------------------------------------
@@ -84,6 +110,40 @@ $(function() {
 //Productカルーセル
 //------------------------------------------------------
 
+$('.slider-for').slick({
+    arrows:false,
+    fade:true,
+    speed: 500,
+    infinite: true,
+
+    afterChange: function (slickSlider, i) {
+        //remove all active class
+        $('.slider-nav .slick-slide').removeClass('slick-active');
+        //set active class for current slide
+        $('.slider-nav .slick-slide').eq(i).addClass('slick-active');
+    }
+});
+$('.slider-nav .slick-slide').eq(0).addClass('slick-active');
+
+$('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    autoplay: false,
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    vertical: true
+
+});
+$('.slider-nav').on('mouseenter', '.slick-slide', function (e) {
+	var $currTarget = $(e.currentTarget),
+    	index = $currTarget.data('slick-index'),
+        slickObj = $('.slider-for').slick('getSlick');
+
+    slickObj.slickGoTo(index);
+
+});
 
 
 //-----------------------------------------------------
