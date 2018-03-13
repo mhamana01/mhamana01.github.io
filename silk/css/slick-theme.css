@@ -1,6 +1,5 @@
 
 /* Arrows */
-
 .slick-prev,
 .slick-next
 {
@@ -77,11 +76,11 @@
 }
 */
 .slick-prev{
-  left: 90px;
+  left: 9px;
 }
 
 .slick-next{
-    right: 90px;
+    right: 9px;
 }
 /*
 [dir='rtl'] .slick-next

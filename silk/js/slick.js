@@ -16,6 +16,9 @@
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 
+
+
+/*
 $('.product-preview').slick({
  slidesToShow: 1,
  slidesToScroll: 1,
@@ -31,19 +34,9 @@ $('.product-thumb').slick({
  centerMode: true,
  focusOnSelect: true
 });
-
-$('.new-products-line-up').slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1
-});
+*/
 
 
-$('.instagram-line-up').slick({
-  infinite: true,
-  slidesToShow: 3.5,
-  slidesToScroll: 1
-});
 
 
 ;(function(factory) {
