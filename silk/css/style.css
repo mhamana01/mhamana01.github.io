@@ -189,7 +189,7 @@ header nav ul li a{
   padding: 0 60px;
   margin-top: 200px;
   transition: 1.0s;
-  align-items: center;
+  align-self: center;
 }
 
 .feature-copy{
