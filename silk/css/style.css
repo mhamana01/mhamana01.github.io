@@ -197,6 +197,8 @@ header nav ul li a{
   font-family: "Julius Sans One";
   width: 1160px;
   height: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .ttn{
   width: 1160px;
@@ -350,8 +352,8 @@ font-size: 21px;
   height: 305px;
   display: flex;
   width: 1160px;
-  padding: 0 60px;
-  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .new-arrival-content{
