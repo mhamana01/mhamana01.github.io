@@ -9,11 +9,13 @@ body{
 .fixed{
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 1280px;
 }
 
 header {
-  width: 100%;
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
   height: 130px;
   z-index: 999;
   background: #fff;
