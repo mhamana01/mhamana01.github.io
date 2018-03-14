@@ -186,10 +186,10 @@ header nav ul li a{
 
 .Product-feature{
   width: 1160px;
-  padding: 0 60px;
   margin-top: 200px;
   transition: 1.0s;
-  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .feature-copy{
@@ -218,6 +218,8 @@ header nav ul li a{
 
 .feature-wrap{
   width:1160px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   position: relative;
   justify-content: space-between;
