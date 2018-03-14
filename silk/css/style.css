@@ -354,10 +354,12 @@ font-size: 21px;
   width: 1160px;
   margin-right: auto;
   margin-left: auto;
+  justify-content: space-between;
 }
 
 .new-arrival-content{
   font-size: 14px;
+
 }
 .new-arrival-content a{
   text-decoration: none;
