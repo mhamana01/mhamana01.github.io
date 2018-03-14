@@ -71,7 +71,7 @@ header {
 /*bottom Navigation*/
 
 .nav-container{
-  width: 100%;
+  width: 1280px;
   height: 40px;
   overflow: hidden;
   display: flex;
@@ -378,6 +378,8 @@ font-size: 21px;
 
 .inner-wrap{
   width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 160px;
   display:flex;
   justify-content: space-between;
